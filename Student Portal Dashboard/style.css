@@ -1,0 +1,363 @@
+/* body */
+body {
+    /* border: 2px solid red; */
+     margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*  LOGIN PAGE  */
+.login-container {
+    /* border: 2px solid rgb(0, 106, 255); */
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Student Portal Login */
+.login-container h2 {
+    /* border: 2px solid rgb(255, 0, 102); */
+    margin-bottom: 1.5rem;
+}
+
+/* for the email and password */
+.login-container input {
+    width: 90%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #444fc8;
+    border-radius: 8px;
+}
+
+/* for the login button */
+.login-container button {
+    /* border: 2px solid rgb(0, 255, 76); */
+    width: 100%;
+    padding: 0.75rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* to change the color when hovering */
+.login-container button:hover {
+  background: #0056b3;
+}
+
+/* error message */
+.error-message {
+  color: red;
+  margin-top: 0.75rem;
+}
+
+
+
+/*  DASHBOARD LAYOUT  */
+.dashboard-container {
+    /* border: 2px solid rgb(0, 255, 76); */
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/*  for my Sidebar */
+.sidebar {
+    /* border: 2px solid rgb(255, 200, 0); */
+    width: 250px;
+    background: #007bff;
+    /* background: orange; */
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+/* for the student portal in the dashboard */
+.sidebar h2 {
+    /* border: 2px solid rgb(0, 255, 76); */
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* for the sidebar navigation stuff(profile,courses, blah blah blah) */
+.sidebar nav ul {
+    /* border: 2px solid rgb(229, 255, 0); */
+    list-style: none;  /* to remove the dot stuff*/
+}
+
+.sidebar nav ul li {
+    /* border: 2px solid rgb(0, 255, 76); */
+    margin:1rem 0;
+    /* justify-content: space-between; */
+
+}
+
+.sidebar nav ul li a {
+    /* border: 2px solid rgb(255, 89, 0); */
+    text-decoration: none;  /* to remove the link line*/
+    color: white;
+    padding: 0.75rem 1rem;
+    display: block;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+
+/* when i hover the link */
+.sidebar nav ul li a:hover {
+    background: white;
+    color: #007bff;
+}
+
+
+/* Main content that will be showing the action */
+.main-content {
+    /* border: 2px solid rgb(255, 0, 93); */
+    /* display: flex; */
+    flex: 1;
+    padding: 2rem;
+    background: #f9f9f9;
+    overflow-y: auto;
+    /* width: 1100px; */
+}
+
+/*  the section where the content will be displayed */
+.section {
+    /* border: 2px solid rgb(0, 255, 242); */
+    display: none;  /*  so that it will hide all sections by default */
+}
+
+/*  this is for the section clicked [the active section] */
+.section.active {
+    /* border: 2px solid rgb(157, 0, 255); */
+    display: block;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* for the section heading (profile) */
+.section h2 {
+    /* border: 2px solid rgb(0, 255, 242); */
+    margin-bottom: 1rem;
+    color: #007bff;
+}
+
+/*  for the Profile details */
+#profileDetails p {
+    /* border: 2px solid rgb(0, 255, 98); */
+    margin: 0.5rem 0;
+    /* margin: 5px 0; */
+}
+
+/* for the Edit Profile button */
+#editProfileBtn{
+    border: 1px solid #007bff;
+    background-color:#007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* when i hover the button */
+#editProfileBtn:hover {
+    background: #0056b3;
+}
+
+
+/* for the Edit Profile form */
+#editProfileForm {
+    /* border: 2px solid rgb(0, 255, 242); */
+    margin-top: 1rem;
+}
+
+/* for the Edit Profile form inputs */
+#editProfileForm input {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.6rem;
+    /* border: 1px solid #ccc; */
+    border: 1px solid #444fc8;
+    border-radius: 8px;
+}
+
+/* for the Edit Profile form button */
+#editProfileForm button {
+    margin-top: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* when i hover the button */
+#editProfileForm button:hover {
+    background: #0056b3;
+}
+
+/* to hide the edit profile form */
+.hidden {
+    display: none;
+}
+
+/* Cards (Courses) */
+.cards {
+    /* border: 2px solid rgb(0, 255, 242); */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.card {
+    /* border: 2px solid rgb(115, 0, 255); */
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    /* transition: transform 0.2s; */
+    transform: translateY(-5px);
+}
+
+/* Announcements */
+/* for pinned announcements */
+#announcementsList p {
+    /* border: 2px solid rgb(115, 0, 255); */
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+
+/* for announcement */
+/* #announcementsList p.pinned {
+    background: #baffeb;
+    cursor: pointer;
+} */
+
+
+
+/* for announcement that is true, it will show blue */
+/* #announcementsList p.pinned:hover {
+    background: #007bff;
+    color: white;
+    font-weight: bold;
+
+} */
+
+
+/* for announcement that is not true, it will show red */
+/* #announcementsList b.pinned:hover {
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+
+} */
+
+
+/* for announcement that is true, it will show blue */
+#announcementsList p.pinned-true:hover {
+  /* background: #007bff; */
+    background: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transform: translateX(-7px);
+
+}
+
+/* for announcement that is not true, it will show red */
+#announcementsList p.pinned-false:hover {
+    background: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    transform: translateX(-7px);
+
+}
+
+
+/* Events */
+#eventsList p {
+    /* border: 2px solid rgb(115, 0, 255); */
+    background: #fff;
+    margin: 0.5rem 0;
+    padding: 0.75rem;
+    border-left: 10px solid#007bff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+#eventsList p:hover {
+    background: #007bff;
+    color: white;
+    border-left: 10px solid wheat;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(-7px);
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .sidebar h2 {
+    display: none;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sidebar nav ul li {
+    margin: 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
